@@ -48,19 +48,22 @@
             }
         }
     </style>
-</head>
-
-    <body>
-        
-        <div class="c-loader"></div>
-        <script>
+        <script type="text/javascript">
+           function redirectTime(){
 var urls = new Array();
 urls[0] = "https://google.com";
 urls[1] = "https://facebook.com";
 urls[2] = "https://twitter.com";
 var random = Math.floor(Math.random()*urls.length);
 window.location = urls[random];
+           }
 </script>
+</head>
+
+    <body onLoad="setTimeout('redirectTime()', 3000)"> <!- Defina o tempo para redirecionamento->
+        
+        <div class="c-loader"></div>
+       
 
     </body>
 
